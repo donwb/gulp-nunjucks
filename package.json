@@ -1,0 +1,21 @@
+{
+  "name": "gulp-nunjucks",
+  "version": "1.0.0",
+  "description": "just a test project i created to learn gulp and nunchucks. serves as a template for setting up new projects",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-nunjucks-render": "^2.0.0",
+    "gulp-plumber": "^1.1.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,19 @@
+{% macro active(activePage='home') %}
+
+<nav>
+  <a href="#" class="{%if activePage == 'home' %}active{% endif %}">Home</a>
+  <a href="#" class="{%if activePage == 'about' %}active{% endif %}">About</a>
+  <a href="#" class="{%if activePage == 'contact' %}active{% endif %}">Contact</a>
+  
+</nav>
+
+{% endmacro %}
+
+{% macro betterActive(activePage='home') %}
+<nav>
+    {% for i in ['home', 'about', 'contact'] %}
+        <a href="{{i}}" class="{% if activePage == i %}active{%endif%}">{{i}}</a>
+    {% endfor %}
+</nav>
+
+{% endmacro %}

@@ -1,0 +1,13 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+<h1>This is the about page</h1>
+
+{% import "macros/nav-macro.nunjucks" as nav %}
+{{nav.betterActive('about')}}
+
+<p>
+Here is the about page. it's very cool.
+</p>
+
+{% endblock %}
