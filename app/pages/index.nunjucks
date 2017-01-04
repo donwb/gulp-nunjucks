@@ -6,9 +6,7 @@
 {% import "macros/nav-macro.nunjucks" as nav %}
 {{nav.active('home')}}
 
-<h2>Oh damn, this is web development redefined!</h2>
-
-<p> This is specific to the page only</p>
+<p> This is the index page</p>
 
 
 
