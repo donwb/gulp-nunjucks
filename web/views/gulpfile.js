@@ -6,11 +6,11 @@ var browserSync = require('browser-sync');
 
 gulp.task('nunjucks', function() {
 	// gets the .html and .nunjucks files
-	return gulp.src('app/pages/**/*.nunjucks')
+	return gulp.src('pages/**/*.nunjucks')
 
 	// Renders template w/nunjucks
 	.pipe(nunjucksRender({
-		path: ['app/templates']
+		path: ['templates']
 	}))
 	.on('error', notify.onError({
 		message: "Error: <%= error.message %>",
@@ -18,7 +18,7 @@ gulp.task('nunjucks', function() {
 		sound: "Frog"
 	}))
 	// output files
-	.pipe(gulp.dest('app'))
+	.pipe(gulp.dest('.'))
 	.pipe(browserSync.reload({
 		stream: true
 	}))
@@ -33,14 +33,14 @@ gulp.task('css-watch', function(done){
 gulp.task('bs', function() {
 	browserSync({
 		server: {
-			baseDir: 'app'
+			baseDir: '.'
 		},
 		browser: 'google chrome'
 	})
 })
 
 gulp.task('watch', ['bs', 'nunjucks', 'css-watch'], function(){
-	gulp.watch('app/pages/**/*.nunjucks', ['nunjucks']);
-	gulp.watch('app/templates/**/*.nunjucks', ['nunjucks']);
-	gulp.watch('app/css/*.css', ['css-watch']);
+	gulp.watch('pages/**/*.nunjucks', ['nunjucks']);
+	gulp.watch('templates/**/*.nunjucks', ['nunjucks']);
+	gulp.watch('css/*.css', ['css-watch']);
 });
