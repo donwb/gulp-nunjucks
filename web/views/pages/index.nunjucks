@@ -8,7 +8,12 @@
 
 <p> This is the index page</p>
 
-Goodbye
+<div id="leaderboard"></div>
 
+<p>Static content for home page.</p>
+
+<div id="from-button"></div>
+
+<p> This is below that table</p>
 
 {% endblock %}

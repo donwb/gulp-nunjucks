@@ -1,0 +1,23 @@
+{% block content %}
+
+    <table class="table">
+        <caption class="caption">Current Leaderboard</caption>
+        <thead>
+        <tr>
+            <th>Email</th>
+            <th>Score</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for l in leaderboard %}
+        <tr>
+            <td>{{l.sum}}</td>
+            <td>{{l.email | upper}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+
+{% endblock %}

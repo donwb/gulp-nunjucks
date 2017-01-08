@@ -1,5 +1,8 @@
 var express = require('express')
+var path = require('path');
 var app = express()
+
+app.use(express.static(path.join(__dirname, 'views')));
 
 app.get('/data', function (req, res) {
     var j = {
@@ -22,7 +25,7 @@ app.get('/data', function (req, res) {
 })
 
 app.get('/', function(req, res){
-    res.sendfile
+    res.sendFile('views/index.html');
 })
 
 app.listen(3000, function () {

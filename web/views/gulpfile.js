@@ -30,6 +30,11 @@ gulp.task('css-watch', function(done){
 	done();
 })
 
+gulp.task('js-watch', function(done){
+	browserSync.reload();
+	done();
+})
+
 gulp.task('bs', function() {
 	browserSync({
 		server: {
@@ -39,8 +44,9 @@ gulp.task('bs', function() {
 	})
 })
 
-gulp.task('watch', ['bs', 'nunjucks', 'css-watch'], function(){
+gulp.task('watch', ['nunjucks', 'css-watch'], function(){
 	gulp.watch('pages/**/*.nunjucks', ['nunjucks']);
 	gulp.watch('templates/**/*.nunjucks', ['nunjucks']);
 	gulp.watch('css/*.css', ['css-watch']);
+	gulp.watch('js/*.js', ['js-watch']);
 });

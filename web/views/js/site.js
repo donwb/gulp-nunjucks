@@ -1,7 +1,22 @@
 $(document).ready(function(){
-  $.getJSON('http://localhost:5000/data', function(data){
-    
-    console.log(data);
+  $.getJSON('/data', function(data){
+  
+
+    var res = nunjucks.render('../templates/leader.njk', data);
+
+
+    $('#leaderboard').html(res);
+
+    $('#test').click(tester);
 
   });
 });
+
+
+function tester(){
+  $.getJSON('/data', function(data){
+    var res = nunjucks.render('../templates/leader.njk', data);
+    $('#from-button').html(res);
+
+  })
+}

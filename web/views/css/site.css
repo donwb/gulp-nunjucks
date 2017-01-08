@@ -1,4 +1,8 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: gold;
+    color: darkblue;
+}
+
+.caption {
+    font-weight: bolder;
 }
